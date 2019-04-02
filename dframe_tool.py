@@ -3,7 +3,7 @@ from numpy import np
 
 
 class DframeTools:
-
+    # miss_data作为异常值列表传入类，将异常值作为空值进行处理
     def __init__(self,miss_data=[np.nan,'NS',999999,-999999],df=None,axis=0):
         self.axis = axis
         self.miss_data = miss_data
@@ -51,3 +51,4 @@ class DframeTools:
         #序列转换
         df_variance = s_variance.to_frame()
         return df_variance
+        
